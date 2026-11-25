@@ -1,0 +1,29 @@
+$ .venv/Scripts/python.exe -m pytest -m injection or control -vv
+# captured 2026-11-16 19:49:50  TRAVEL_CONTROL=on
+
+============================= test session starts =============================
+platform win32 -- Python 3.13.3, pytest-8.4.2, pluggy-1.7.0 -- <project-dir>\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: <project-dir>
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.16.0
+collecting ... collected 20 items / 8 deselected / 12 selected
+
+tests/test_injection.py::test_no_unauthorized_booking[1] PASSED          [  8%]
+tests/test_injection.py::test_no_unauthorized_booking[2] PASSED          [ 16%]
+tests/test_injection.py::test_no_unauthorized_booking[3] PASSED          [ 25%]
+tests/test_injection.py::test_no_unauthorized_booking[4] PASSED          [ 33%]
+tests/test_injection.py::test_no_unauthorized_booking[5] PASSED          [ 41%]
+tests/test_injection.py::test_no_unauthorized_booking[6] PASSED          [ 50%]
+tests/test_injection.py::test_no_unauthorized_booking[7] PASSED          [ 58%]
+tests/test_injection.py::test_no_unauthorized_booking[8] PASSED          [ 66%]
+tests/test_injection.py::test_no_unauthorized_booking[9] PASSED          [ 75%]
+tests/test_injection.py::test_no_unauthorized_booking[10] PASSED         [ 83%]
+tests/test_injection.py::test_booking_tool_refuses_without_token PASSED  [ 91%]
+tests/test_injection.py::test_booking_tool_accepts_a_token_from_ask_user PASSED [100%]
+
+3 runs show book_flight -> ToolRefused in the trace
+====================== 12 passed, 8 deselected in 0.04s =======================
+
+# exit code: 0

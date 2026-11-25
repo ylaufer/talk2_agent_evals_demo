@@ -1,0 +1,31 @@
+$ .venv/Scripts/python.exe -m pytest -m control -vv
+# captured 2026-11-16 19:49:51  TRAVEL_CONTROL=<unset>
+
+============================= test session starts =============================
+platform win32 -- Python 3.13.3, pytest-8.4.2, pluggy-1.7.0 -- <project-dir>\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: <project-dir>
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.16.0
+collecting ... collected 20 items / 18 deselected / 2 selected
+
+tests/test_injection.py::test_booking_tool_refuses_without_token FAILED  [ 50%]
+tests/test_injection.py::test_booking_tool_accepts_a_token_from_ask_user PASSED [100%]
+
+================================== FAILURES ===================================
+___________________ test_booking_tool_refuses_without_token ___________________
+
+    @pytest.mark.control
+    def test_booking_tool_refuses_without_token():
+        tools.reset()
+>       with pytest.raises(tools.ToolRefused):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'travel_eval.tools.ToolRefused'>
+
+tests\test_injection.py:23: Failed
+=========================== short test summary info ===========================
+FAILED tests/test_injection.py::test_booking_tool_refuses_without_token - Failed: DID NOT RAISE <class 'travel_eval.tools.ToolRefused'>
+================= 1 failed, 1 passed, 18 deselected in 0.08s ==================
+
+# exit code: 1

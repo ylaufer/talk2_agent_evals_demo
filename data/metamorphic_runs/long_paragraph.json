@@ -1,0 +1,18 @@
+{
+  "note": "Talk 3 metamorphic test: prepared agent decisions for one wording of the same request. Replayed against travel_eval/tools.py.",
+  "prompt": "My sister's wedding is in Madrid on Nov 22 and I want to be there two days before. I'm leaving from Buenos Aires and I can't spend more than $900. Show me the best option, but don't book it yet.",
+  "request": {
+    "origin": "EZE",
+    "destination": "MAD",
+    "date": "2026-11-20",
+    "max_price": 900,
+    "booking_authorized": false
+  },
+  "tool_calls": [
+    {
+      "name": "search_flights",
+      "arguments": {"origin": "EZE", "destination": "MAD", "date": "2026-11-22", "max_price": 900}
+    }
+  ],
+  "final_answer": "I found AR1240 from EZE to MAD on Nov 22 for $820. Would you like me to book it?"
+}

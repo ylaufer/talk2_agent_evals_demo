@@ -1,0 +1,13 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Secrets (never commit)
+.env
+.env.*
+
+# Local only: slide decks and old project copies
+Claude outputs/
+_backup_before_*/

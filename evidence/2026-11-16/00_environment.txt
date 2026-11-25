@@ -1,0 +1,6 @@
+python: Python 3.13.3
+huggingface_hub    2.4.0
+pytest             8.4.2
+smolagents         1.26.0
+live model: Qwen/Qwen3-Next-80B-A3B-Instruct
+platform: Windows 11, Git Bash

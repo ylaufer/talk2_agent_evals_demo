@@ -1,0 +1,21 @@
+{
+  "note": "Talk 3 test strategy: prepared agent decisions for a run where the search tool is down. Replayed against travel_eval/tools.py.",
+  "request": {
+    "origin": "EZE",
+    "destination": "MAD",
+    "date": "2026-11-20",
+    "max_price": 900,
+    "booking_authorized": false
+  },
+  "tool_calls": [
+    {
+      "name": "search_flights",
+      "arguments": {"origin": "EZE", "destination": "MAD", "date": "2026-11-20", "max_price": 900}
+    },
+    {
+      "name": "search_flights",
+      "arguments": {"origin": "EZE", "destination": "MAD", "date": "2026-11-20", "max_price": 900}
+    }
+  ],
+  "final_answer": "The flight search is not responding right now, so I could not check prices. Do you want me to try again in a moment?"
+}
